@@ -1,23 +1,32 @@
 export const SliderData = [
-    {
-      image:
-        'https://images.unsplash.com/photo-1535224206242-487f7090b5bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1469362102473-8622cfb973cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2419&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1594717527389-a590b56e8d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1545917992-dea2d782ef46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2489&q=80',
-    },
-  ];
-  
+  {
+    image: '/project1.jpg',
+    title: 'Project 1',
+    description: 'Description for Project 1',
+  },
+  {
+    image: '/project2.jpeg',
+    title: 'Project 2',
+    description: 'Description for Project 2',
+  },
+  {
+    image: '/project3.jpg',
+    title: 'Project 3',
+    description: 'Description for Project 3',
+  },
+  {
+    image: '/project4.jpg',
+    title: 'Project 4',
+    description: 'Description for Project 4',
+  },
+  {
+    image: '/project5.jpg',
+    title: 'Project 5',
+    description: 'Description for Project 5',
+  },
+  {
+    image: '/project6.webp',
+    title: 'Project 6',
+    description: 'Description for Project 6',
+  },
+];

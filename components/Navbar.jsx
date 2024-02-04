@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Image from 'next/image'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -30,20 +31,25 @@ const Navbar = () => {
       className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
     >
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
-        <Link href='/'>
-          <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
-            Captur
-          </h1>
-        </Link>
+      <Link href='/'>
+  <Image
+    src="/image001.png"
+    alt="logo"
+    height={40} // Adjust the height to fit your design
+    width={140}  // Adjust the width to fit your design
+    className="logo-image" // Add your custom class here
+  />
+</Link>
+
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           <li className='p-4'>
             <Link href='/'>Home</Link>
           </li>
           <li className='p-4'>
-            <Link href='/#gallery'>Gallery</Link>
+            <Link href='/aboutus'>AboutUs </Link>
           </li>
           <li className='p-4'>
-            <Link href='/work'>Work</Link>
+            <Link href='/services'>Services</Link>
           </li>
           <li className='p-4'>
             <Link href='/contact'>Contact</Link>
