@@ -1,12 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  font-family: 'Raleway', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.custom-img {
-  background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80')
+body {
+  font-family: Inter;
+}
+
+@layer utilities {
+  .btn_white { 
+    @apply  border-white bg-white px-8 py-3 text-green-50
+  }
+  .btn_white_text  { 
+    @apply  border-white bg-white px-8 py-3 text-gray-90
+  }
+  .btn_green  { 
+    @apply  border-green-50 bg-green-50 px-8 py-5 text-white
+  }
+  .btn_dark_green { 
+    @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+  }
+  .btn_dark_green_outline  { 
+    @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+  }
+  
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 3xl:px-0;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  /* FONTS */
+  .regular-64 {
+    @apply text-[64px] font-[400] leading-[120%];
+  }
+
+  .regular-40 {
+    @apply text-[40px] font-[400] leading-[120%];
+  }
+
+  .regular-32 {
+    @apply text-[32px] font-[400];
+  }
+
+  .regular-24 {
+    @apply text-[24px] font-[400];
+  }
+
+  .regular-20 {
+    @apply text-[20px] font-[400];
+  }
+
+  .regular-18 {
+    @apply text-[18px] font-[400];
+  }
+
+  .regular-16 {
+    @apply text-[16px] font-[400];
+  }
+
+  .regular-14 {
+    @apply text-[14px] font-[400];
+  }
+
+  .medium-14 {
+    @apply text-[14px] font-[600];
+  }
+
+  .bold-88 {
+    @apply text-[88px] font-[700] leading-[120%];
+  }
+
+  .bold-64 {
+    @apply text-[64px] font-[700] leading-[120%];
+  }
+
+  .bold-52 {
+    @apply text-[52px] font-[700] leading-[120%];
+  }
+
+  .bold-40 {
+    @apply text-[40px] font-[700] leading-[120%];
+  }
+
+  .bold-32 {
+    @apply text-[32px] font-[700] leading-[120%];
+  }
+
+  .bold-20 {
+    @apply text-[20px] font-[700];
+  }
+
+  .bold-18 {
+    @apply text-[18px] font-[700];
+  }
+
+  .bold-16 {
+    @apply text-[16px] font-[700];
+  }
+
+  /* Hero */
+  .hero-map {
+    @apply absolute right-0 top-0 h-screen w-screen bg-pattern-2 bg-cover bg-center md:-right-28 xl:-top-60;
+  }
+
+  /* Camp */
+  .camp-quote {
+    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
+  }
+
+  /* Feature */
+  .feature-phone {
+    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex  3xl:left-20;
+  }
+
+  /* Get App */
+  .get-app {
+    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hero-section {
+  background-color: #f5f5f5; 
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #5383e2;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #fafafa;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  /* Responsive adjustments for smaller screens */
+  .hero-content h1 {
+    font-size: 2xl;
+  }
+  .hero-content p {
+    font-size: sm;
+  }
+}
+
+/* styles.css or add to your component */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+ /* .max-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}  */
+
+.intro-section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.services-section {
+  display: grid;
+  gap: 20px;
+}
+
+.service-category {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-category h3 {
+  color: #336699;
+}
+
+.why-choose-section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-section {
+  background-color: #336699;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .services-section {
+    grid-template-columns: 1fr;
+  }
 }
